@@ -93,7 +93,7 @@ class TheGrader {
     };
 
     //compare the edit text value against the acceptable answers
-    String editTextValue = mBinding.edtQ2.getText().toString();
+    String editTextValue = mBinding.edtQ2.getText().toString().trim();
     for (String correctResponse : CORRECT_RESPONSES) {
       if (editTextValue.equalsIgnoreCase(correctResponse)) {
         //found a match - case doesn't matter - correct answer
