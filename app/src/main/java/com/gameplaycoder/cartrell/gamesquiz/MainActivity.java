@@ -8,7 +8,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.gameplaycoder.cartrell.gamesquiz.databinding.ActivityMainBinding;
