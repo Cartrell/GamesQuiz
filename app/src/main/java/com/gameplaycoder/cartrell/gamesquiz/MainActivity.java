@@ -135,20 +135,20 @@ public class MainActivity extends AppCompatActivity {
     for (int childIndex = 0; childIndex < numChildren; childIndex++) {
       View childView = viewGroup.getChildAt(childIndex);
       if (isCheckBoxContainer(childView)) {
-        setContForAllCheckBoxesIn((ViewGroup)childView);
+        setFontForAllCheckBoxesIn((ViewGroup)childView);
       }
     }
   }
 
   //-------------------------------------------------------------------------
-  // setFontForAllCheckBoxes
+  // setFontForAllCheckBoxesIn
   //-------------------------------------------------------------------------
   /**
    * Iterates all the child views of the content layout view and changes the fonts
-   * of all the check boxes. Unfortunately, this applying the font via XML doesn't seem to work.
+   * of all the check boxes. Unfortunately, applying the font via XML doesn't seem to work.
    * @param viewGroup - The group that contains the checkboxes.
    */
-  private void setContForAllCheckBoxesIn(ViewGroup viewGroup) {
+  private void setFontForAllCheckBoxesIn(ViewGroup viewGroup) {
     Typeface font = Typeface.createFromAsset(getAssets(), "modenine.ttf");
     int numChildren = viewGroup.getChildCount();
     for (int childIndex = 0; childIndex < numChildren; childIndex++) {
