@@ -106,19 +106,23 @@ public class MainActivity extends AppCompatActivity {
    * @return - True if the view is a checkbox container
    */
   private boolean isCheckBoxContainer(View view) {
-    if (!(view instanceof ViewGroup)) {
-      return(false);
+    boolean isOk;
+
+    if (view instanceof ViewGroup) {
+      //all checkbox containers should have an appropriate tag set.
+      Object tag = view.getTag();
+      if (tag instanceof String) {
+        String sTag = (String)tag;
+        String checkBoxContainerTag = getString(R.string.checkBoxContainerTag);
+        isOk = sTag.equalsIgnoreCase(checkBoxContainerTag);
+      } else {
+        isOk = false;
+      }
+    } else {
+      isOk = false;
     }
 
-    //all checkbox containers should have an appropriate tag set.
-    Object tag = view.getTag();
-    if (tag instanceof String) {
-      String sTag = (String)tag;
-      String checkBoxContainerTag = getString(R.string.checkBoxContainerTag);
-      return(sTag.equalsIgnoreCase(checkBoxContainerTag));
-    }
-
-    return(false);
+    return(isOk);
   }
 
   //-------------------------------------------------------------------------
