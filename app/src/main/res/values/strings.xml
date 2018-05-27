@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">GamesQuiz</string>
+    <string name="asteroids">Asteroids</string>
+    <string name="bee">Bee</string>
+    <string name="blastForce">Blast Force</string>
+    <string name="bomberman">Bomberman</string>
+    <string name="breakoutArkanoid">Breakout/Arkanoid</string>
+    <string name="checkBoxContainerTag">checkBoxContainer</string>
+    <string name="cockroach">Cockroach</string>
+    <string name="coinsExtraLife">coins; extra life</string>
+    <string name="dragonfly">Dragonfly</string>
+    <string name="editHint">Tap here and enter your answer.</string>
+    <string name="goldFire">gold; a fire flower</string>
+    <string name="gradius">Gradius</string>
+    <string name="header">Classic Video Games Quiz</string>
+    <string name="jailBreak">Jail Break</string>
+    <string name="mazeCraze">Maze Craze</string>
+    <string name="missileCommand">Missile Command</string>
+    <string name="mosquito">Mosquito</string>
+    <string name="pacMan">Pac-Man</string>
+    <string name="pointsPassGo">points; to pass go</string>
+    <string name="question1">1). In this game, you must destroy waves of alien ships before they reach the bottom.</string>
+    <string name="question2">2). What game is this?</string>
+    <string name="question3">3). In Super Mario Bros., every time you get 100 _____, you get _____.</string>
+    <string name="question4">4). Select the games where you are timed to clear each level.</string>
+    <string name="question5">5). What game is this?</string>
+    <string name="question6">6). Select all the critters that appear in the arcade classic, Millipede.</string>
+    <string name="reset">Reset</string>
+    <string name="scoreMessageFormat">You got %1$d question%2$s correct</string>
+    <string name="sonicHedgehog">Sonic The Hedgehog</string>
+    <string name="spaceInvaders">Space Invaders</string>
+    <string name="spider">Spider</string>
+    <string name="starsExtraLife">stars; extra life</string>
+    <string name="submit">Submit</string>
+    <string name="superMario">Super Mario Bros</string>
+</resources>

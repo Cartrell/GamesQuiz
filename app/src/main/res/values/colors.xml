@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorQuestionDivider">#c0c0c0</color>
+    <color name="colorButtonNormal">#ffff00</color>
+    <color name="colorButtonActivated">#ffffff</color>
+    <color name="colorButtonHighlight">#00ffff</color>
+    <color name="colorButtonTextPrimaryDisableOnly">#ffffff</color>
+    <color name="colorEditText">#ffff00</color>
+    <color name="colorEditTextHint">#808080</color>
+    <color name="colorHeaderText">#ffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorQuestionText">#ffffff</color>
+</resources>

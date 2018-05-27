@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="answerButtonTextSize">18sp</dimen>
+    <dimen name="dividerHeight">1dp</dimen>
+    <dimen name="headerTextSize">20sp</dimen>
+    <dimen name="margin">8dp</dimen>
+</resources>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        tools:context=".MainActivity">
+
+        <!-- ============================================== -->
+        <!-- background image -->
+        <!-- ============================================== -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <!-- ============================================== -->
+        <!-- header text -->
+        <!-- ============================================== -->
+        <TextView
+            android:id="@+id/txtHeader"
+            style="@style/HeaderTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!-- ============================================== -->
+        <!-- scroll view that contains all five questions -->
+        <!-- ============================================== -->
+        <ScrollView
+            android:id="@+id/scrContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/vwBottomSeparator"
+            android:layout_below="@id/txtHeader">
+
+            <LinearLayout
+                android:id="@+id/lytContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- ============================================== -->
+                <!-- question 1 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question1" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/q1Correct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spaceInvaders"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gradius"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pacMan"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/asteroids"
+                        android:theme="@style/AnswerRadioButton" />
+                </RadioGroup>
+
+                <!-- ============================================== -->
+                <!-- question 2 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question2" />
+
+                <!-- .............................................. -->
+                <!-- place image between two views and assign weights -->
+                <!-- for desired image re-size -->
+                <!-- .............................................. -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/pacman" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtQ2"
+                    style="@style/EditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/editHint" />
+
+                <!-- ============================================== -->
+                <!-- question 3 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question3" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQ3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pointsPassGo"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/starsExtraLife"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/q3Correct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coinsExtraLife"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goldFire"
+                        android:theme="@style/AnswerRadioButton" />
+                </RadioGroup>
+
+                <!-- ============================================== -->
+                <!-- question 4 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question4" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin"
+                    android:orientation="vertical"
+                    android:tag="@string/checkBoxContainerTag">
+
+                    <CheckBox
+                        android:id="@+id/q4Incorrect0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/missileCommand"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q4Correct0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sonicHedgehog"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q4Correct1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/superMario"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q4Incorrect1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/breakoutArkanoid"
+                        android:theme="@style/AnswerCheckBox" />
+                </LinearLayout>
+
+                <!-- ============================================== -->
+                <!-- question 5 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question5" />
+
+                <!-- .............................................. -->
+                <!-- place image between two views and assign weights -->
+                <!-- for desired image re-size -->
+                <!-- .............................................. -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/bomberman" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQ5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jailBreak"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mazeCraze"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/blastForce"
+                        android:theme="@style/AnswerRadioButton" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        android:id="@+id/q5Correct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bomberman"
+                        android:theme="@style/AnswerRadioButton" />
+                </RadioGroup>
+
+                <!-- ============================================== -->
+                <!-- question 6 -->
+                <!-- ============================================== -->
+                <View
+                    style="@style/Divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight" />
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question6" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin"
+                    android:orientation="vertical"
+                    android:tag="@string/checkBoxContainerTag">
+
+                    <CheckBox
+                        android:id="@+id/q6Correct0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bee"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q6Correct1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mosquito"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q6Correct2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spider"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q6Incorrect0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cockroach"
+                        android:theme="@style/AnswerCheckBox" />
+
+                    <CheckBox
+                        android:id="@+id/q6Correct3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dragonfly"
+                        android:theme="@style/AnswerCheckBox" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/vwBottomSeparator"
+            style="@style/Divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerHeight"
+            android:layout_above="@id/lytButtons" />
+
+        <LinearLayout
+            android:id="@+id/lytButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onSubmitClick"
+                android:text="@string/submit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onResetClick"
+                android:text="@string/reset" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
